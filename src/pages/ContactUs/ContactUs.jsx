@@ -24,7 +24,7 @@ const ContactUs = () => {
         <Helmet>
                 <title>Contact Us | Jobline</title>
             </Helmet>
-        {/* hello h*/}
+        {/* hello hi*/}
             
             <div className="hero min-h-screen bg-base-200">
            
