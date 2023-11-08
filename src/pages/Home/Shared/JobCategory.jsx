@@ -19,13 +19,13 @@ const matchedData_partTime=jobs.filter(job=>job.jobCategory==category_name[3]);
 //console.log(jobs);
 // const [toggleState,setToggleState]=useState('null');
 useEffect(()=>{
-fetch('http://localhost:3000/jobs')
+fetch('https://ph-job-line-server.vercel.app/jobs')
 .then(res=>res.json())
 .then(data=>setJobs(data))
 },[])
 
 useEffect(()=>{
-    fetch('http://localhost:3000/jobCategory')
+    fetch('https://ph-job-line-server.vercel.app/jobCategory')
     .then(res=>res.json())
     .then(data=>setCategory(data))
 },[])
@@ -47,11 +47,11 @@ useEffect(()=>{
         </TabList>     
         
         <TabPanel>
-        <div className='grid lg:grid-cols-3 grid-cols-1 my-10 '>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 my-10 '>
             {
                 jobs.map(job=><>
-                <div className="card rounded-none w-96 bg-base-100 shadow-xl mx-auto my-2">
-                        <figure><img className='w-96 h-56' src={job.photo} alt="Shoes" /></figure>
+                <div className="card rounded-none lg:w-96 sm:w-full bg-base-100 shadow-xl mx-auto my-2">
+                        <figure><img className='w-full h-56' src={job.photo} alt="Shoes" /></figure>
                             <div className="p-5 text-left">
                                 <h2 className="card-title">Post: {job.jobTitle}</h2>
                                 <p>Posted By: {job.userName}</p>
@@ -69,11 +69,11 @@ useEffect(()=>{
         </TabPanel>
         
         <TabPanel>
-        <div className='grid lg:grid-cols-3 grid-cols-1 my-10 '>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 mx-2  grid-cols-1 my-10 '>
             {
                 matchedData_onsite.map(job=><>
-                <div className="card rounded-none w-96 bg-base-100 shadow-xl mx-auto my-2">
-                        <figure><img className='w-96 h-56' src={job.photo} alt="Shoes" /></figure>
+                <div className="card rounded-none lg:w-96 sm:w-full bg-base-100 shadow-xl mx-auto my-2">
+                        <figure><img className='w-full h-56' src={job.photo} alt="Shoes" /></figure>
                             <div className="p-5 text-left">
                                 <h2 className="card-title">Post: {job.jobTitle}</h2>
                                 <p>Posted By: {job.userName}</p>
@@ -90,11 +90,11 @@ useEffect(()=>{
             </div> 
         </TabPanel>
         <TabPanel>
-        <div className='grid lg:grid-cols-3 grid-cols-1 my-10 '>
+        <div className='grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 my-10 '>
             {
                 matchedData_remote.map(job=><>
-                <div className="card rounded-none w-96 bg-base-100 shadow-xl mx-auto my-2">
-                        <figure><img className='w-96 h-56' src={job.photo} alt="Shoes" /></figure>
+                <div className="card rounded-none lg:w-96 sm:w-full bg-base-100 shadow-xl mx-auto my-2">
+                        <figure><img className='w-full h-56' src={job.photo} alt="Shoes" /></figure>
                             <div className="p-5 text-left">
                                 <h2 className="card-title">Post: {job.jobTitle}</h2>
                                 <p>Posted By: {job.userName}</p>
@@ -111,11 +111,11 @@ useEffect(()=>{
             </div> 
         </TabPanel>
         <TabPanel>
-        <div className='grid lg:grid-cols-3 grid-cols-1 my-10 '>
+        <div className='grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 my-10 '>
             {
                matchedData_hybrid.map(job=><>
-                <div className="card rounded-none w-96 bg-base-100 shadow-xl mx-auto my-2">
-                        <figure><img className='w-96 h-56' src={job.photo} alt="Shoes" /></figure>
+                <div className="card rounded-none lg:w-96 sm:w-full bg-base-100 shadow-xl mx-auto my-2">
+                        <figure><img className='w-full h-56' src={job.photo} alt="Shoes" /></figure>
                             <div className="p-5 text-left">
                                 <h2 className="card-title">Post: {job.jobTitle}</h2>
                                 <p>Posted By: {job.userName}</p>
@@ -132,11 +132,11 @@ useEffect(()=>{
             </div> 
         </TabPanel>
         <TabPanel>
-        <div className='grid lg:grid-cols-3 grid-cols-1 my-10 '>
+        <div className='grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 my-10 '>
             {
                 matchedData_partTime.map(job=><>
-                <div className="card rounded-none w-96 bg-base-100 shadow-xl mx-auto my-2">
-                        <figure><img className='w-96 h-56' src={job.photo} alt="Shoes" /></figure>
+                <div className="card rounded-none lg:w-96 sm:w-full bg-base-100 shadow-xl mx-auto my-2">
+                        <figure><img className='w-full h-56' src={job.photo} alt="Shoes" /></figure>
                             <div className="p-5 text-left">
                                 <h2 className="card-title">Post: {job.jobTitle}</h2>
                                 <p>Posted By: {job.userName}</p>
@@ -152,9 +152,7 @@ useEffect(()=>{
             }
             </div> 
         </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
+
         </Tabs> 
         </div>
         </>);

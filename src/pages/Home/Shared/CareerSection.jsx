@@ -7,8 +7,8 @@ const CareerSection = () => {
             <h3 className='text-5xl font-bold text-center text-[#523B9B]  mx-auto'>Quick Career Tips</h3>
             <p className='text-base text-gray-500 text-center mt-4  mx-auto'>Post a job to tell us about your project. We'll quickly match you with the right freelancers.</p>
         </div>
-        <div className='grid lg:grid-cols-3 grid-cols-1 my-10 '>
-                        <div className="card rounded-none w-96 bg-base-100 shadow-xl mx-auto my-2">
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:w-full grid-cols-1 my-10 '>
+                        <div className="card rounded-none w-full bg-base-100 shadow-xl mx-auto my-2">
                             <figure><img className='w-96' src="https://i.ibb.co/vZtDL3q/magnet-me-LDc-C7a-CWVlo-unsplash.jpg" alt="Shoes" /></figure>
                             <div className="p-5 text-left">
                                 <h2 className="card-title">Strategies for a Balanced Work Life</h2>
@@ -16,7 +16,7 @@ const CareerSection = () => {
                                 <Link className="text-[#523B9B] font-semibold">Read more...</Link>
                           </div>
                       </div>
-                      <div className="card rounded-none w-96 bg-base-100 shadow-xl mx-auto my-2">
+                      <div className="card rounded-none md:w-96 sm:w-full bg-base-100 shadow-xl mx-auto my-2">
                             <figure><img className='w-96' src="https://i.ibb.co/LPhsFRf/christina-wocintechchat-com-LQ1t-8-Ms5-PY-unsplash.jpg" alt="Shoes" /></figure>
                             <div className="p-5 text-left">
                                 <h2 className="card-title">Job Interview: Your Guide to Success</h2>
@@ -24,7 +24,7 @@ const CareerSection = () => {
                                 <Link className="text-[#523B9B] font-semibold">Read more...</Link>
                           </div>
                       </div>
-                      <div className="card rounded-none w-96 bg-base-100 shadow-xl mx-auto my-2">
+                      <div className="card rounded-none md:w-96 sm:w-full bg-base-100 shadow-xl mx-auto my-2">
                             <figure><img className='w-96' src="https://i.ibb.co/9yBCYfV/hunters-race-MYbh-N8-Kaa-Ec-unsplash.jpg" alt="Shoes" /></figure>
                             <div className="p-5 text-left">
                                 <h2 className="card-title"> Self-Confidence: Keys to Career Success</h2>

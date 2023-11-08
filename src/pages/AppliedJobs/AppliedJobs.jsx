@@ -19,7 +19,7 @@ const AppliedJobs = () => {
     //const value = category.value;
     //console.log(value );
     useEffect(()=>{
-        fetch('http://localhost:3000/resume')
+        fetch('https://ph-job-line-server.vercel.app/resume')
         .then(res=>res.json())
         .then(data=>{
             setAppliedJobs(data),

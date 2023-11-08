@@ -58,7 +58,7 @@ const PerJobDetails = () => {
                 }).then((result) => {
                     if (result.isConfirmed) {
         
-                        fetch('http://localhost:3000/resume',{
+                        fetch('https://ph-job-line-server.vercel.app/resume',{
                             method:"POST",
                             headers: {
                                 'content-type': 'application/json'
@@ -72,7 +72,7 @@ const PerJobDetails = () => {
                             if(data.insertedId){
                                 Swal.fire('Hurrah!You applied for the Job');
                                  //data update
-                                        fetch(`http://localhost:3000/jobs/${id}`,{
+                                        fetch(`https://ph-job-line-server.vercel.app/jobs/${id}`,{
                                             method:"PUT",
                                             headers: {
                                                 'content-type': 'application/json'

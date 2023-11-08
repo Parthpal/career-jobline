@@ -11,7 +11,7 @@ const JobCategoryDetails = ({cat,TabPanel,Tabs}) => {
   // console.log(matchedData);
     // const [toggleState,setToggleState]=useState('null');
   useEffect(()=>{
-    fetch('http://localhost:3000/jobs')
+    fetch('https://ph-job-line-server.vercel.app/jobs')
     .then(res=>res.json())
     .then(data=>setJobs(data))
   },[])

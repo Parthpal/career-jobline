@@ -11,7 +11,7 @@ const Blog = () => {
     </Helmet>
             <h3 className='text-center text-3xl'>My Blogs</h3>
 
-            <div className="collapse collapse-arrow bg-base-200 mt-10">
+            <div className="collapse collapse-arrow bg-base-200 mt-10 container mx-auto">
             <input type="radio" name="my-accordion-2" /> 
             <div className="collapse-title text-xl font-medium bg-[#E6DFFC]">
             What is an access token and refresh token? How do they work and where should we store them on the client-side?
@@ -33,7 +33,7 @@ const Blog = () => {
                     
             </div>
             </div>
-            <div className="collapse collapse-arrow bg-base-200 mt-10">
+            <div className="collapse collapse-arrow bg-base-200 mt-10 container mx-auto">
             <input type="radio" name="my-accordion-2" /> 
             <div className="collapse-title text-xl font-medium bg-[#E6DFFC]">
             What is express js? What is Nest JS ?
@@ -47,7 +47,7 @@ const Blog = () => {
             </div>
             </div>
 
-            <div className="collapse collapse-arrow bg-base-200 mt-10">
+            <div className="collapse collapse-arrow bg-base-200 mt-10 container mx-auto">
             <input type="radio" name="my-accordion-2" /> 
             <div className="collapse-title text-xl font-medium bg-[#E6DFFC]">
                  Explanation of Code
@@ -69,7 +69,7 @@ const Blog = () => {
                 <span className="text-xl"> All Job Page </span> <br/>
                 
                 <p>
-                    This Page Helps User to see all job post. Code defines a React component called `AllJobs`. This component is responsible for fetching and displaying a list of job details from a local API endpoint. It imports the necessary dependencies, including `useState` from React, the `AllJobsDetails` component, the `Header` and `Footer` components for layout, and the `Helmet` component for managing the page title. Inside the component, it initializes a state variable `jobs` using the `useState` hook, initially set to an empty array. It uses the `fetch` function to make an HTTP GET request to the local API endpoint "http://localhost:3000/jobs." The response is expected to be in JSON format. When the data is received, it is converted to JSON using `.then(res => res.json())`, and the resulting data is set as the state of the `jobs` variable using `setJobs(data)`. The component's return statement renders the following elements: The `Header` component for the page's header, the `Helmet` component to set the page's title to "All Jobs | Jobline," a container with a CSS grid layout, displaying the list of job details. It uses the `map` function to iterate over the `jobs` array and render the `AllJobsDetails` component for each job. Each `AllJobsDetails` component receives a `key` prop to uniquely identify it and a `job` prop to provide the job details. Finally, the component includes the `Footer` component to render the page's footer. Overall, this component fetches job data from a local API, maps the data to individual job details components, and displays them in a grid layout. It's designed to show a list of job listings on a website called "Jobline."
+                    This Page Helps User to see all job post. Code defines a React component called `AllJobs`. This component is responsible for fetching and displaying a list of job details from a local API endpoint. It imports the necessary dependencies, including `useState` from React, the `AllJobsDetails` component, the `Header` and `Footer` components for layout, and the `Helmet` component for managing the page title. Inside the component, it initializes a state variable `jobs` using the `useState` hook, initially set to an empty array. It uses the `fetch` function to make an HTTP GET request to the local API endpoint "https://ph-job-line-server.vercel.app/jobs." The response is expected to be in JSON format. When the data is received, it is converted to JSON using `.then(res => res.json())`, and the resulting data is set as the state of the `jobs` variable using `setJobs(data)`. The component's return statement renders the following elements: The `Header` component for the page's header, the `Helmet` component to set the page's title to "All Jobs | Jobline," a container with a CSS grid layout, displaying the list of job details. It uses the `map` function to iterate over the `jobs` array and render the `AllJobsDetails` component for each job. Each `AllJobsDetails` component receives a `key` prop to uniquely identify it and a `job` prop to provide the job details. Finally, the component includes the `Footer` component to render the page's footer. Overall, this component fetches job data from a local API, maps the data to individual job details components, and displays them in a grid layout. It's designed to show a list of job listings on a website called "Jobline."
                 </p>
 
         </p>
@@ -79,7 +79,7 @@ const Blog = () => {
                 <p>
                 Here user can see at which jobs they applied.This code defines a React component known as `AppliedJobs`, which serves as a part of a web application and is responsible for displaying a list of job applications made by a user. It enables users to filter these job applications by category and provides detailed information for each applied job. The component imports essential dependencies, including React, `useContext`, and `useState`, as well as various UI components such as `Header`, `AppliedJobsDetails`, `SweetAlert2`, `Helmet`, and `Footer`.
 
-                Within the component, it utilizes the `useContext` hook to access the user's authentication context, retrieves the user's email, and initializes state variables `appliedJobs` and `displayCategory` using the `useState` hook. It fetches job application data from a local API endpoint (http://localhost:3000/resume) and updates these state variables once the data is loaded. The component also filters the applied jobs based on the user's email.
+                Within the component, it utilizes the `useContext` hook to access the user's authentication context, retrieves the user's email, and initializes state variables `appliedJobs` and `displayCategory` using the `useState` hook. It fetches job application data from a local API endpoint (https://ph-job-line-server.vercel.app/resume) and updates these state variables once the data is loaded. The component also filters the applied jobs based on the user's email.
 
                 The `handleFilter` function is utilized to enable users to filter their applied jobs by category, and the filtered results are stored in the `displayCategory` state variable.
 

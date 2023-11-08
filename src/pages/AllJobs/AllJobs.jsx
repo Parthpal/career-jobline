@@ -11,7 +11,7 @@ const AllJobs = () => {
     const [searchVal, setSearchVal] = useState("");
    
 useEffect(()=>{
-    fetch('http://localhost:3000/jobs')
+    fetch('https://ph-job-line-server.vercel.app/jobs')
     .then(res=>res.json())
     .then(data=>{
         setJobs(data),

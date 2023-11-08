@@ -17,7 +17,7 @@ const MyJobsDetails = ({job,myJob,setMyJob}) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:3000/jobsDel/${_id}`,{
+                fetch(`https://ph-job-line-server.vercel.app/jobsDel/${_id}`,{
                         method:'DELETE'
                     })
                     .then(res=> res.json())

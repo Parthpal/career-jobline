@@ -29,7 +29,7 @@ const UpdateJobs = () => {
 
         const jobData={jobTitle,jobCategory,salary,description,jobPostingDate,jobDateDeadline,applicants,photo};
         console.log(jobData);
-        fetch(`http://localhost:3000/jobsUp/${_id}`,{
+        fetch(`https://ph-job-line-server.vercel.app/jobsUp/${_id}`,{
             method:"PUT",
             headers: {
                 'content-type': 'application/json'

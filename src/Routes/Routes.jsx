@@ -45,7 +45,7 @@ const Routes = createBrowserRouter([
         },
         {
         path: "/myJobs",
-        loader: () => fetch('http://localhost:3000/jobs'),
+        loader: () => fetch('https://ph-job-line-server.vercel.app/jobs'),
         element: <PrivateRoutes><MyJobs/></PrivateRoutes>
         },
         {
@@ -62,13 +62,13 @@ const Routes = createBrowserRouter([
         },
         {
         path: "/jobs/:id",
-        loader: () => fetch('http://localhost:3000/jobs'),
+        loader: () => fetch('https://ph-job-line-server.vercel.app/jobs'),
         element:<PrivateRoutes><PerJobDetails/></PrivateRoutes>
         },
         {
         path: "/UpdateJobs/:id",
         element:<PrivateRoutes><UpdateJobs/></PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:3000/jobs/${params.id}`),
+        loader: ({params}) => fetch(`https://ph-job-line-server.vercel.app/jobs/${params.id}`),
         },
       ],
     },

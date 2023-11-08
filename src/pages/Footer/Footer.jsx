@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
 <div className='mt-10'>
-            <footer className="bg-[#E6DFFC] grid grid-cols-1 md:grid-cols-2 lg:gap-16 gap-5 lg:grid-cols-4 text-center  p-10 bg-base-200 text-base-content">
+            <footer className="bg-[#E6DFFC] grid grid-cols-1 md:grid-cols-2 lg:gap-16 gap-5 lg:grid-cols-4 text-center  p-10 text-base-content">
                 <aside className='grid grid-cols-1 mb-4'>
                 <figure className="px-10">
                 <img src="https://i.ibb.co/j4NFJ3W/labour.png" alt="Shoes" className="rounded-xl mx-auto w-20 h-20" />
@@ -40,8 +40,8 @@ const Footer = () => {
 
          </footer>
          <aside className="text-center bg-[#E6DFFC]">
-                <p>Copyright © 2023 - All right reserved by PH Jobline</p>
-                </aside>
+                <p className='mx-auto'>Copyright © 2023 - All right reserved by PH Jobline</p>
+              </aside>
         </div>
     );
 };

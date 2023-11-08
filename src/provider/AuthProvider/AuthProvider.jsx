@@ -35,25 +35,25 @@ const AuthProvider = ({children}) => {
 
     useEffect(()=>{
         const unSubscribe= onAuthStateChanged(auth,(currentUser)=>{
-            const userEmail=currentUser?.email;
-            const loggedUser={email:userEmail};
+            // const userEmail=currentUser?.email;
+            // const loggedUser={email:userEmail};
              setUser(currentUser);
              console.log('user in the current state',currentUser);
              setLoading(false);
             // setLoading(false);
-            if(currentUser){
+            // if(currentUser){
                 
-                axios.post('http://localhost:3000/jwt',loggedUser,{withCredentials:true})
-                .then(res=>{
-                    console.log('logged in token response',res.data);
-                })
-            }
-            else{
-                axios.post('http://localhost:3000/logOut',loggedUser,{withCredentials:true})
-                .then(res=>{
-                    console.log('logged out token response',res.data);
-                })
-            }
+            //     axios.post('https://ph-job-line-server.vercel.app/jwt',loggedUser,{withCredentials:true})
+            //     .then(res=>{
+            //         console.log('logged in token response',res.data);
+            //     })
+            // }
+            // else{
+            //     axios.post('https://ph-job-line-server.vercel.app/logOut',loggedUser,{withCredentials:true})
+            //     .then(res=>{
+            //         console.log('logged out token response',res.data);
+            //     })
+            // }
          })
          return ()=>{
              unSubscribe();

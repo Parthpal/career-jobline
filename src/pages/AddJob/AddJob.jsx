@@ -28,7 +28,7 @@ const AddJob = () => {
 
         const jobData={userName,userEmail:user.email,jobTitle,jobCategory,salary,description,jobPostingDate,jobDateDeadline,applicants,photo};
         console.log(jobData);
-        fetch('http://localhost:3000/jobs',{
+        fetch('https://ph-job-line-server.vercel.app/jobs',{
             method:"POST",
             headers: {
                 'content-type': 'application/json'

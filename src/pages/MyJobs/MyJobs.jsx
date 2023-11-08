@@ -17,7 +17,7 @@ const MyJobs = () => {
     console.log(matchedData);
     
     // useEffect(()=>{
-    //     fetch('http://localhost:3000/jobs')
+    //     fetch('https://ph-job-line-server.vercel.app/jobs')
     //     .then(res=>res.json())
     //     .then(data=>setJobs(data))
     // },[])
@@ -53,7 +53,7 @@ const MyJobs = () => {
  
     </div>:<>
             
-            <h3 className='text-xl text-center text-black'>You did not Apply For Job Yet</h3> </>}
+            <h3 className='text-xl text-center text-black'>You did not Post Any Job Yet</h3> </>}
            <Footer/>
             </>);
     };
