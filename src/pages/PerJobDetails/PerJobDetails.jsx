@@ -5,6 +5,7 @@ import { AuthContext } from '../../provider/AuthProvider/AuthProvider';
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet-async';
 import Footer from '../Footer/Footer';
+import emailjs from '@emailjs/browser';
 
 const PerJobDetails = () => {
     const {user}=useContext(AuthContext);
@@ -27,7 +28,7 @@ const PerJobDetails = () => {
 
         if(user.email!=matchedData.userEmail && jobDeadline>=currentDate){
             const { value: formValues } =await Swal.fire({
-                title: "Multiple inputs",
+                title: "Post Your Resume Link",
                 confirmButtonText: 'submit',
                 cancelButtonText: 'Cancel',
                 html: `
@@ -57,7 +58,13 @@ const PerJobDetails = () => {
                     confirmButtonText: 'Yes, send it!'
                 }).then((result) => {
                     if (result.isConfirmed) {
-        
+                        emailjs.send('service_b2wur3m', 'template_wqufsl7', user_data, 'vi3KZCR2z3UWOLZrN')
+                        .then((result) => {
+                            console.log(result.text);
+                        }, (error) => {
+                            console.log(error.text);
+                        });
+
                         fetch('https://ph-job-line-server.vercel.app/resume',{
                             method:"POST",
                             headers: {
@@ -89,7 +96,6 @@ const PerJobDetails = () => {
                             }
                         })
 
-                        
                         
                     }
                 })

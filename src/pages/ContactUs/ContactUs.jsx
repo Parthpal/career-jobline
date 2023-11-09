@@ -10,7 +10,6 @@ const ContactUs = () => {
 
     const sendEmail = (e) => {
       e.preventDefault();
-  
       emailjs.sendForm('service_u47i4br', 'template_pgep7qb', form.current, 'vi3KZCR2z3UWOLZrN')
         .then((result) => {
             console.log(result.text);
@@ -26,7 +25,7 @@ const ContactUs = () => {
             </Helmet>
         {/* hello hi*/}
             
-            <div className="hero min-h-screen bg-base-200">
+            <div data-aos='zoom-out' className="hero min-h-screen bg-base-200">
            
                 <div className="hero-content flex-col">
                 <h3 className='text-5xl font-bold text-[#523B9B] text-center my-5'>Contact Us</h3>

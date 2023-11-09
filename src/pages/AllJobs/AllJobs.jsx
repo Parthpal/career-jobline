@@ -49,7 +49,7 @@ console.log(searchVal);
             <input className="input input-primary input-bordered w-full max-w-xs" placeholder="Search Job Here" onChange={e =>handleSearchClick(e.target.value)} type="text" />
             {/* <button onClick={handleSearchClick} className="btn">search</button> */}
         </div>
-        <div className='grid lg:grid-cols-3 grid-cols-1 my-10 '>
+        <div data-aos='zoom-out' className='grid lg:grid-cols-3 grid-cols-1 my-10 '>
             {
                 displayJobs.map(job=><AllJobsDetails key={job._id} job={job} ></AllJobsDetails>)
             }

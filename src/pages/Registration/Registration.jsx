@@ -63,11 +63,11 @@ const Registration = () => {
                 <title>Register | Jobline</title>
             </Helmet>
     <div className='flex flex-col lg:flex-row my-10'>
-            <div className="flex-1  ">
+            <div data-aos='zoom-out' className="flex-1  ">
                 <img className='lg:max-w-lg lg:ml-36 mt-20' src="https://i.ibb.co/HgqQjGx/register.png" alt="login    " srcset="" />
              </div>
             <div className='flex-1 mt-16'>
-            <div className="md:w-[400px] w-[350px] bg-base-200 rounded-lg border-[#7E57C2] border-2 lg:mx-0 mx-auto">
+            <div data-aos='zoom-out' className="md:w-[400px] w-[350px] bg-base-200 rounded-lg border-[#7E57C2] border-2 lg:mx-0 mx-auto">
             <h3 className='text-3xl text-center mt-4 font-bold text-[#7E57C2]'>Register Here</h3>
                 <div className=" ">
                     <form onSubmit={handleRegister} className="card-body ">
