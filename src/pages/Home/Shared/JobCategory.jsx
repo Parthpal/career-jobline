@@ -38,16 +38,16 @@ useEffect(()=>{
            {/* <h3>{data.length}</h3>  */}
            {/* <h3>{jobTitle}</h3>  */}
         <div>
-        <Tabs className='text-center'>
-        <TabList >
+        <Tabs className='text-center '>
+        <TabList className='border-b-2 text-[#523B9B] font-bold border-[#523B9B]'>
             <Tab>ALL</Tab>
                 {
                     category.map(cat=><Tab>{cat.cat_name.toUpperCase()}</Tab>)
                 }
         </TabList>     
         
-        <TabPanel>
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 my-10 '>
+        <TabPanel className=''>
+        <div data-aos='fade-out' className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 my-10 '>
             {
                 jobs.map(job=><>
                 <div className="card rounded-none lg:w-96 sm:w-full bg-base-100 shadow-xl mx-auto my-2">
@@ -69,7 +69,7 @@ useEffect(()=>{
         </TabPanel>
         
         <TabPanel>
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 mx-2  grid-cols-1 my-10 '>
+        <div data-aos='fade-out' className='grid lg:grid-cols-3 md:grid-cols-2 mx-2  grid-cols-1 my-10 '>
             {
                 matchedData_onsite.map(job=><>
                 <div className="card rounded-none lg:w-96 sm:w-full bg-base-100 shadow-xl mx-auto my-2">
@@ -90,7 +90,7 @@ useEffect(()=>{
             </div> 
         </TabPanel>
         <TabPanel>
-        <div className='grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 my-10 '>
+        <div data-aos='fade-out' className='grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 my-10 '>
             {
                 matchedData_remote.map(job=><>
                 <div className="card rounded-none lg:w-96 sm:w-full bg-base-100 shadow-xl mx-auto my-2">
@@ -111,7 +111,7 @@ useEffect(()=>{
             </div> 
         </TabPanel>
         <TabPanel>
-        <div className='grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 my-10 '>
+        <div data-aos='fade-out' className='grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 my-10 '>
             {
                matchedData_hybrid.map(job=><>
                 <div className="card rounded-none lg:w-96 sm:w-full bg-base-100 shadow-xl mx-auto my-2">
@@ -132,7 +132,7 @@ useEffect(()=>{
             </div> 
         </TabPanel>
         <TabPanel>
-        <div className='grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 my-10 '>
+        <div data-aos='fade-out' className='grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 my-10 '>
             {
                 matchedData_partTime.map(job=><>
                 <div className="card rounded-none lg:w-96 sm:w-full bg-base-100 shadow-xl mx-auto my-2">

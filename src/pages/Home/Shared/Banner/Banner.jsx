@@ -2,9 +2,9 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className="hero min-h-screen bg-[#E6DFFC]">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-            <div className=''>
+        <div data-aos="fade-right" className="hero min-h-screen bg-[#E6DFFC]">
+        <div  className="hero-content flex-col lg:flex-row-reverse">
+            <div data-aos="zoom-in-up" className=''>
             <img src="https://i.ibb.co/DM5BQc0/Profiling-amico-1.png" className="lg:max-w-sm rounded-lg mx-auto" />
             </div>
             <div className=''>
